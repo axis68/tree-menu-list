@@ -1,28 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from '../../Icon';
 import optionShape from './optionTypes';
+import ToggleButton from '../toggle-button/ToggleButton';
+import './SingleSelectItem.css';
 
-function ToggleButton({ isExpanded, onClick }) {
-  return (
-    <span
-      className="toggle-button"
-      tabIndex={-1}
-      role="button"
-      onClick={onClick}
-      onKeyDown={() => {}}
-      onFocus={() => {}}
-    >
-      {isExpanded ? (
-        <Icon name="arrow-down" color="#a4b3bc" />
-      ) : (
-        <Icon name="arrow-right" color="#a4b3bc" />
-      )}
-    </span>
-  );
-}
-
-function TheSingleSelectitem({
+function SingleSelectitem({
   option,
   selectedOption,
   clickHandler,
@@ -35,7 +17,7 @@ function TheSingleSelectitem({
       return null;
     }
     return subOptions.map((subOption) => (
-      <TheSingleSelectitem
+      <SingleSelectitem
         key={subOption.index}
         option={subOption}
         selectedOption={selectedOption}
@@ -69,7 +51,7 @@ function TheSingleSelectitem({
     <>
       <div
         className={[
-          'the-single-select-item-container',
+          'single-select-item',
           isSelected ? 'item-selected' : '',
         ].join(' ')}
       >
@@ -99,12 +81,7 @@ function TheSingleSelectitem({
   );
 }
 
-ToggleButton.propTypes = {
-  isExpanded: PropTypes.bool,
-  onClick: PropTypes.func,
-};
-
-TheSingleSelectitem.propTypes = {
+SingleSelectitem.propTypes = {
   option: PropTypes.shape(optionShape),
   selectedOption: PropTypes.shape(optionShape),
   clickHandler: PropTypes.func.isRequired,
@@ -113,4 +90,4 @@ TheSingleSelectitem.propTypes = {
   level: PropTypes.number,
 };
 
-export default TheSingleSelectitem;
+export default SingleSelectitem;

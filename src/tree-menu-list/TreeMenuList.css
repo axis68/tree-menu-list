@@ -1,0 +1,7 @@
+.tree-menu-list {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  height: fit-content;
+  overflow-y: auto;
+}
+

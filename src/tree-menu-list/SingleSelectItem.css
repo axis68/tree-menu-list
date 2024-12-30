@@ -1,0 +1,17 @@
+.single-select-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: auto;
+    min-width: 300px;
+  }
+  
+  .single-select-item:hover {
+    background-color: gray;
+  }
+  
+  .single-select-item.item-selected p {
+    font-weight: 700;
+  }

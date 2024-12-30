@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { useState, useEffect } from 'react';
-import optionShape from './internal/optionTypes';
-import TheSingleSelectitem from './TheSingleSelectItem';
+import optionShape from './optionTypes';
+import SingleSelectitem from './SingleSelectItem';
+import './TreeMenuList.css';
 
 optionShape.subOptions = PropTypes.arrayOf(PropTypes.shape(optionShape));
 
 function findOptionsContaining(options, particularOption) {
   return options.reduce((acc, option) => {
     if (option?.index === particularOption?.index) {
-      return [option]; // Stop searching the children
+      return [option]; // Stop searching children
     }
     if (option.subOptions) {
       const result = findOptionsContaining(option.subOptions, particularOption);
@@ -40,12 +41,14 @@ function TreeMenuList({ options, selectedOption, onChange }) {
   useEffect(() => {
     const calculatedExpOptions = findOptionsContaining(options, selectedOption);
     setExpandedOptions(calculatedExpOptions);
+    // options and selectedOptions are not referenced: useEffect to be executed on initialization
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="tree-menu-list">
       {options.map((option) => (
-        <TheSingleSelectitem
+        <SingleSelectitem
           key={option.index}
           option={option}
           selectedOption={selectedOption}
