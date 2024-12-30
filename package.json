@@ -1,7 +1,7 @@
 {
   "name": "tree-menu-list",
   "version": "0.1.0",
-  "homepage": "https://github.com/axis68/tree-menu-list",
+  "homepage": "https://axis68.github.io/tree-menu-list",
   "private": false,
   "dependencies": {
     "cra-template": "1.2.0",
