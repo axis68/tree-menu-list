@@ -50,6 +50,7 @@ The `TreeMenuList` expects the following props:
   - Keyboard support is not yet implemented.  
   - Mouse and touch interactions could be improved.  
   - The component could be extended to support custom render functions or additional features.
+  - Tests are not developped yet.
 
 ## Available Scripts
 
