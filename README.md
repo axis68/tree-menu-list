@@ -1,32 +1,10 @@
-# Quick help about TreeMenuList component
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Quick help
 
 ## About the TreeMenuList component
 
 The `TreeMenuList` component provides a hierarchical list of options for selection. Each option may include a nested list of sub-options, allowing for flexible, multi-level structures.
+
+See the TreeMenuList running live [here](https://axis68.github.io/tree-menu-list/).
 
 ### Definition of options
 
@@ -72,6 +50,29 @@ The `TreeMenuList` expects the following props:
   - Keyboard support is not yet implemented.  
   - Mouse and touch interactions could be improved.  
   - The component could be extended to support custom render functions or additional features.
+
+## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Opening
 Thank you for visiting this page! I hope you found the information helpful.

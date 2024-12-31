@@ -23,10 +23,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Example of a TreeMenuList component:
+        <p>The `TreeMenuList` component provides a hierarchical list of options for selection.<br/>
+        Each option may include a nested list of sub-options, allowing for flexible, 
+        multi-level structures.
         </p>
-        <TreeMenuList options={options} selectedOption={currentOption} onChange={(option) => setCurrentOption(option)}/>
+        <TreeMenuList options={options} selectedOption={currentOption} 
+          onChange={(option) => setCurrentOption(option)}/>
       </header>
     </div>
   );
